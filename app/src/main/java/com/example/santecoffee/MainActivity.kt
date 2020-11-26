@@ -13,9 +13,12 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.santecoffee.util.DISPLAY_NAME
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.nav_header_main.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -43,6 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         val headerView = navView.getHeaderView(0)
         headerView.email_textView.text = intent.getStringExtra("displayName")
+        DISPLAY_NAME = intent.getStringExtra("displayName").toString()
 
     }
 
