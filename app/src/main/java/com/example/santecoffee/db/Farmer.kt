@@ -6,6 +6,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "farmers_table")
 data class Farmer (
+    var name:String = "",
+    var gender: String = "",
     var birthCertificateUrl: String = "",
     var nationalIdnumber: String = "",
     var phoneNumber: String = "",

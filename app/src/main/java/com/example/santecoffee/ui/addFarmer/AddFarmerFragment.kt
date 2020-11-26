@@ -34,6 +34,8 @@ class AddFarmerFragment : Fragment() {
         addFarmerbutton.setOnClickListener {
             addFarmerViewModel.insertFarmer(
                 Farmer(
+                    name.text.toString(),
+                    gender.text.toString(),
                     birthCertificate.text.toString(),
                     nin.text.toString(),
                     phone.text.toString(),
@@ -42,6 +44,8 @@ class AddFarmerFragment : Fragment() {
                 )
             )
 
+            name.text?.clear()
+            gender.text?.clear()
             birthCertificate.text?.clear()
             nin.text?.clear()
             phone.text?.clear()
