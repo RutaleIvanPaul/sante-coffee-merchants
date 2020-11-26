@@ -1,15 +1,15 @@
 package com.example.santecoffee.ui.home
 
 import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 import com.example.santecoffee.repository.MainRepository
 
 class HomeViewModel @ViewModelInject constructor(
     val mainRepository: MainRepository
-) : ViewModel() {
+) : ViewModel(){
 
     val farmers_list = mainRepository.getAllFarmers()
+
+    val farmers_from_api = mainRepository.getFarmersfromApi()
 
 }
