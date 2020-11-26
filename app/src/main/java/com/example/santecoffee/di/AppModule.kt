@@ -3,6 +3,7 @@ package com.example.santecoffee.di
 import android.content.Context
 import androidx.room.Room
 import com.example.santecoffee.db.FarmersDB
+import com.example.santecoffee.services.RequestManager
 import com.example.santecoffee.util.FARMERS_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
@@ -27,4 +28,9 @@ object AppModule {
     @Singleton
     @Provides
     fun providesRunningDao(database: FarmersDB) = database.getDao()
+
+    @Singleton
+    @Provides
+    fun providesRequestManager()
+            = RequestManager()
 }
