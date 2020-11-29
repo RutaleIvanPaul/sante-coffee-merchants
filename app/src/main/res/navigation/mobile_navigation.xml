@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.laboremus.santecoffee.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:name="com.laboremus.santecoffee.ui.audits.AuditFragment"
+        android:label="@string/menu_audits"
+        tools:layout="@layout/fragment_audits" />
 </navigation>

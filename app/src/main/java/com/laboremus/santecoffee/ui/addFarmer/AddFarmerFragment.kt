@@ -32,17 +32,23 @@ class AddFarmerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         addFarmerbutton.setOnClickListener {
-            addFarmerViewModel.insertFarmer(
-                Farmer(
-                    name.text.toString(),
-                    gender.text.toString(),
-                    birthCertificate.text.toString(),
-                    nin.text.toString(),
-                    phone.text.toString(),
-                    Calendar.getInstance().timeInMillis,
-                    DISPLAY_NAME
+            if (name.text.toString().isEmpty() || gender.text.toString().isEmpty() ||
+                    birthCertificate.text.toString().isEmpty() || nin.text.toString().isEmpty() ||
+                    phone.text.toString().isEmpty()) {
+                Toast.makeText(requireContext(), "Missing Fields", Toast.LENGTH_LONG).show()
+            }
+            else{
+                addFarmerViewModel.insertFarmer(
+                        Farmer(
+                                name.text.toString(),
+                                gender.text.toString(),
+                                birthCertificate.text.toString(),
+                                nin.text.toString(),
+                                phone.text.toString(),
+                                Calendar.getInstance().timeInMillis,
+                                DISPLAY_NAME
+                        )
                 )
-            )
 
             name.text?.clear()
             gender.text?.clear()
@@ -50,7 +56,8 @@ class AddFarmerFragment : Fragment() {
             nin.text?.clear()
             phone.text?.clear()
 
-            Toast.makeText(requireContext(),"Inserted New Farmer", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Inserted New Farmer", Toast.LENGTH_LONG).show()
+        }
         }
     }
 }

@@ -64,7 +64,7 @@ class HomeFragment: Fragment() {
                 farmers_from_api_list.add(Farmer(
                     farmer_list_item.name,
                     farmer_list_item.gender,
-                    "Not Yet Attached.",
+                    "No Birth Certificate.",
                     "",
                     farmer_list_item.phone,
                     0L,
