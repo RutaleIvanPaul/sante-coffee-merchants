@@ -1,5 +1,7 @@
 package com.laboremus.santecoffee.repository
 
+import com.laboremus.santecoffee.db.Audit
+import com.laboremus.santecoffee.db.AuditDao
 import com.laboremus.santecoffee.db.Farmer
 import com.laboremus.santecoffee.db.FarmersDao
 import com.laboremus.santecoffee.services.RequestManager
@@ -7,6 +9,7 @@ import javax.inject.Inject
 
 class MainRepository @Inject constructor(
     val farmersDao: FarmersDao,
+    val auditDao: AuditDao,
     val requestManager: RequestManager
 ) {
 
@@ -22,5 +25,12 @@ class MainRepository @Inject constructor(
 
     fun getFarmersfromApi() = requestManager.returnPostsFromApi()
 
+    suspend fun insertAudits(audit: Audit) = auditDao.insertAudits(audit)
+
+    fun getAllAudits() = auditDao.getAllAuditsSortedByDate()
+
+    fun getOneFarmer(id:Int) = farmersDao.getOneFarmer(id)
+
+    fun getFarmersAndAudits() = auditDao.getFarmersandAudits()
 
 }

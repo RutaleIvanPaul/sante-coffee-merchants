@@ -20,7 +20,7 @@ interface FarmersDao {
     @Query(value = "SELECT * FROM farmers_table ORDER BY timestamp DESC")
     fun getAllFarmersSortedByDate(): LiveData<List<Farmer>>
 
-
-
+    @Query(value = "SELECT * FROM farmers_table WHERE id = :id")
+    fun getOneFarmer(id:Int): LiveData<Farmer>
 
 }

@@ -77,7 +77,7 @@ class FarmerAdapter @Inject constructor(
                 } else {
                     val resultList = mutableListOf<Farmer>()
                     for (farmer in farmers) {
-                        if (farmer.name!!.toLowerCase(Locale.ROOT)
+                        if (farmer.name.toLowerCase(Locale.ROOT)
                                         .contains(charSearch.toLowerCase(Locale.ROOT))
                         ) {
                             resultList.add(farmer)

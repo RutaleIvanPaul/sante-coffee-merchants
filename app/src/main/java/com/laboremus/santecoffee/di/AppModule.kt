@@ -28,7 +28,11 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun providesRunningDao(database: FarmersDB) = database.getDao()
+    fun providesFarmersDao(database: FarmersDB) = database.getFarmersDao()
+
+    @Singleton
+    @Provides
+    fun provideAuditDao(database: FarmersDB) = database.getAuditDao()
 
     @Singleton
     @Provides

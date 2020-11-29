@@ -9,7 +9,7 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_add_farmer">Add Farmer</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_audits">Audits</string>
 
     <string name="edit_farmer">Edit Farmer</string>
 </resources>
