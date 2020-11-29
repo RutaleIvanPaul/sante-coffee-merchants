@@ -43,12 +43,11 @@ class AuditFragment : Fragment() {
 
         auditViewModel.getFarmersAndAudits().observe(viewLifecycleOwner, Observer { farmers_with_audits ->
             val audits = mutableListOf<AuditAdapterItem>()
+            var audits_available = false
             Log.d("AUDITS",farmers_with_audits.toString())
-            if (farmers_with_audits[0].audits.isEmpty()) {
-                audit_progress_bar.visibility = View.GONE
-            }
-            else {
-                farmers_with_audits.forEach { one_farmer_with_audits ->
+            farmers_with_audits.forEach { one_farmer_with_audits ->
+                if (one_farmer_with_audits.audits.isNotEmpty()){
+                    audits_available = true
                     one_farmer_with_audits.audits.forEach { one_farmers_audit ->
 
                         audits.add(AuditAdapterItem(one_farmer_with_audits.farmer.name,
@@ -56,13 +55,19 @@ class AuditFragment : Fragment() {
                                 one_farmers_audit.timestamp))
                     }
                 }
+                }
 
+            if(audits_available) {
                 audit_adapter.audits.clear()
                 audit_adapter.audits.addAll(audits)
                 audit_adapter.notifyDataSetChanged()
                 audit_progress_bar.visibility = View.GONE
                 no_audits.visibility = View.GONE
             }
+            else{
+                audit_progress_bar.visibility = View.GONE
+            }
+
 
         })
     }
