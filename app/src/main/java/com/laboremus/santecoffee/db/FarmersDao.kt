@@ -12,10 +12,10 @@ interface FarmersDao {
     suspend fun insertFarmersList(farmers: List<Farmer>): LongArray
 
     @Query("DELETE FROM farmers_table")
-    suspend fun deleteAll()
+    suspend fun deleteAll(): Int
 
     @Update
-    suspend fun updateFarmer(farmer: Farmer)
+    suspend fun updateFarmer(farmer: Farmer): Int
 
     @Query(value = "SELECT * FROM farmers_table ORDER BY timestamp DESC")
     fun getAllFarmersSortedByDate(): LiveData<List<Farmer>>

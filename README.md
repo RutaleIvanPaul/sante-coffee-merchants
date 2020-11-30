@@ -3,8 +3,20 @@
 An Application to aid Sante Coffee Merchants keep track of their farmers' details.
 
 ## Set up and Run
+###### Application
 - Clone the repository: `git clone https://github.com/RutaleIvanPaul/sante-coffee-merchants.git`
-- Open the project in Android Studio and Run.
+- Open the project in Android Studio and Run on an Emulator.
+
+###### Tests
+Use the command `./gradlew connectedAndroidTest`.  
+Find the reports in `app/build/reports` if your IDE does not automatically open the file.
+
+**NB:**
+- It is best to use a device where the UI Animations are disabled for best results.
+- Also, make sure your device is running at optimal speed and you have a steady internet connection.
+
+Your tests should then play out like below:
+> <img src="https://user-images.githubusercontent.com/30496434/100745104-d6ddea00-33ef-11eb-89dc-1b88c71a1d16.gif" alt="Testing GIF" widht="200"/>
 
 ## How it Works(Features)
 ###### Log in
