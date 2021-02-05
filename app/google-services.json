@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "678076194490",
+    "project_id": "sante-coffee-1606293651383",
+    "storage_bucket": "sante-coffee-1606293651383.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678076194490:android:4adb6827fe72eb4d466c83",
+        "android_client_info": {
+          "package_name": "com.laboremus.santecoffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678076194490-v6vbjd6em1prnsvni6qlqdgvd6hdv699.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.laboremus.santecoffee",
+            "certificate_hash": "a1c189f7a0d6e6ab1cf614ff3647b0ed33494e09"
+          }
+        },
+        {
+          "client_id": "678076194490-7uhe98cvpne0q25ud4ererqoqeaer89k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1bmB9uBsaXB7MhjOCn26LTUmU2oQvl8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678076194490-7uhe98cvpne0q25ud4ererqoqeaer89k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

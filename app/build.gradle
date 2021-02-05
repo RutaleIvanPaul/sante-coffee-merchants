@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -11,7 +12,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.santecoffee"
+        applicationId "com.laboremus.santecoffee"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -54,6 +55,12 @@ dependencies {
 
     //Google Sign In
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    //Firebase Bom
+    implementation platform('com.google.firebase:firebase-bom:26.4.0')
+
+    //Google Analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
     // Room
     implementation "androidx.room:room-runtime:2.2.5"
